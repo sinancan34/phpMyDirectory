@@ -25,6 +25,8 @@ if(isset($_POST['complete'])) {
     $db_name = $_POST['db_name'];
     $db_port = $_POST['db_port'];
 
+    $errors = array( );
+
     if($db_host == "" OR $db_user == "" OR $db_name == "") {
         $errors['database_connect'] = "Database connection details are incorrect.<br>";
     } else {
